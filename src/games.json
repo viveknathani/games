@@ -10,7 +10,7 @@
     {
       "id": "prime-or-trap",
       "title": "Prime or Trap?",
-      "description": "Click prime numbers, avoid composites!",
+      "description": "Save the primes!",
       "icon": "🔢",
       "created": "2026-01-03T00:00:00.000Z"
     }
