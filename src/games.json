@@ -13,6 +13,13 @@
       "description": "Save the primes!",
       "icon": "🔢",
       "created": "2026-01-03T00:00:00.000Z"
+    },
+    {
+      "id": "blind-corner",
+      "title": "Blind Corner",
+      "description": "Navigate a winding track with limited visibility!",
+      "icon": "🏎️",
+      "created": "2026-01-03T00:00:00.000Z"
     }
   ],
   "lastUpdated": "2026-01-03T00:00:00.000Z"

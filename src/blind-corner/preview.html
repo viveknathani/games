@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blind Corner Preview</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 240px;
+      height: 240px;
+      background: #1a1a1a;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .track {
+      position: absolute;
+      width: 80px;
+      height: 300%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #404040;
+      animation: scrollTrack 3s linear infinite;
+    }
+
+    .track::before,
+    .track::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: #ffffff;
+    }
+
+    .track::before {
+      left: -2px;
+    }
+
+    .track::after {
+      right: -2px;
+    }
+
+    .center-line {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: repeating-linear-gradient(
+        to bottom,
+        #666666 0px,
+        #666666 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      animation: scrollLine 0.5s linear infinite;
+    }
+
+    .curve-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      animation: sway 4s ease-in-out infinite;
+      transform-origin: center bottom;
+    }
+
+    .car {
+      position: absolute;
+      width: 16px;
+      height: 24px;
+      left: 50%;
+      bottom: 60px;
+      transform: translateX(-50%);
+      background: #ff4444;
+      border-radius: 2px;
+      z-index: 10;
+      animation: carSway 4s ease-in-out infinite;
+    }
+
+    .car::before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 6px;
+      top: 2px;
+      left: 2px;
+      background: #333333;
+      border-radius: 1px;
+    }
+
+    .car::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 0;
+      left: 0;
+      background: #ff6666;
+    }
+
+    .fog {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        circle at 50% 75%,
+        transparent 0%,
+        transparent 20%,
+        rgba(26, 26, 26, 0.7) 45%,
+        rgba(26, 26, 26, 0.98) 70%
+      );
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .fog-top {
+      position: absolute;
+      width: 100%;
+      height: 30%;
+      top: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(26, 26, 26, 1) 0%,
+        rgba(26, 26, 26, 0.95) 70%,
+        transparent 100%
+      );
+      z-index: 6;
+    }
+
+    @keyframes scrollTrack {
+      0% {
+        top: -400%;
+      }
+      100% {
+        top: 0%;
+      }
+    }
+
+    @keyframes scrollLine {
+      0% {
+        transform: translateX(-50%) translateY(0);
+      }
+      100% {
+        transform: translateX(-50%) translateY(20px);
+      }
+    }
+
+    @keyframes sway {
+      0% {
+        transform: translateX(0) rotate(0deg);
+      }
+      25% {
+        transform: translateX(-20px) rotate(-2deg);
+      }
+      50% {
+        transform: translateX(0) rotate(0deg);
+      }
+      75% {
+        transform: translateX(20px) rotate(2deg);
+      }
+      100% {
+        transform: translateX(0) rotate(0deg);
+      }
+    }
+
+    @keyframes carSway {
+      0% {
+        transform: translateX(-50%);
+      }
+      25% {
+        transform: translateX(-50%) translateX(20px);
+      }
+      50% {
+        transform: translateX(-50%);
+      }
+      75% {
+        transform: translateX(-50%) translateX(-20px);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="curve-container">
+    <div class="track">
+      <div class="center-line"></div>
+    </div>
+  </div>
+  <div class="car"></div>
+  <div class="fog"></div>
+  <div class="fog-top"></div>
+</body>
+</html>
