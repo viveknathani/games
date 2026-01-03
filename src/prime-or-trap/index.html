@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prime or Trap? - Click prime numbers, avoid composites!">
+  <title>Prime or Trap?</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔢</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <h1 class="game-title">Prime or Trap?</h1>
+      <div class="game-stats">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="level">Level: <span id="level">1</span></div>
+        <div class="lives">Lives: <span id="lives">3</span></div>
+      </div>
+    </header>
+
+    <div class="game-area">
+      <canvas id="game-canvas"></canvas>
+      
+      <div id="game-over" class="game-over hidden">
+        <h2>Game Over!</h2>
+        <p id="game-over-reason">You clicked a composite number!</p>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <p>Best Score: <span id="best-score">0</span></p>
+        <button id="restart-btn" class="restart-btn">Play Again</button>
+      </div>
+
+      <div id="instructions" class="instructions">
+        <h2>How to Play</h2>
+        <p><strong>Click prime numbers</strong> to score points</p>
+        <p><strong>Avoid composite numbers</strong> - they end the game!</p>
+        <p><strong>Missing a prime</strong> also ends the game</p>
+        <p>Numbers fall faster as you level up!</p>
+        <button id="start-btn" class="start-btn">Start Game</button>
+      </div>
+    </div>
+
+    <div class="controls-info">
+      <p>Click numbers quickly! Primes = Good, Composites = Bad</p>
+    </div>
+
+    <footer class="game-footer">
+      <p>built by <a href="https://vivekn.dev">viveknathani</a> and AI • <a href="../">homepage</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

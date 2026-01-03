@@ -6,6 +6,13 @@
       "description": "Survive the gravitational pull!",
       "icon": "🎯",
       "created": "2026-01-03T00:00:00.000Z"
+    },
+    {
+      "id": "prime-or-trap",
+      "title": "Prime or Trap?",
+      "description": "Click prime numbers, avoid composites!",
+      "icon": "🔢",
+      "created": "2026-01-03T00:00:00.000Z"
     }
   ],
   "lastUpdated": "2026-01-03T00:00:00.000Z"
