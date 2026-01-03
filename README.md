@@ -16,6 +16,7 @@ The games are mostly built by AI agents following my ideas, which is a fun way t
 ## current games
 
 - **Don't Touch the Center** - Survive the gravitational pull trying to drag you into the danger zone
+- **Prime or Trap?** - Click prime numbers to score, avoid composites or you're out
 
 ## want to play
 
