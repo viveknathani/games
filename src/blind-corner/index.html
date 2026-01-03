@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blind Corner - Navigate a winding track with limited visibility">
+  <title>Blind Corner</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏎️</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <h1 class="game-title">Blind Corner</h1>
+      <div class="game-stats">
+        <div class="distance">Distance: <span id="distance">0</span>m</div>
+        <div class="best-distance">Best: <span id="best-distance">0</span>m</div>
+      </div>
+    </header>
+
+    <div class="game-area">
+      <canvas id="game-canvas"></canvas>
+
+      <div id="game-over" class="game-over hidden">
+        <h2>Game Over</h2>
+        <p>You traveled <span id="final-distance">0</span> meters</p>
+        <button id="restart-btn" class="restart-btn">Try Again</button>
+      </div>
+
+      <div id="instructions" class="instructions">
+        <p><strong>Desktop:</strong> Arrow Keys or A/D</p>
+        <p><strong>Mobile:</strong> Tap left/right to steer</p>
+        <p>Navigate the winding track with limited visibility!</p>
+        <button id="start-btn" class="start-btn">Start Game</button>
+      </div>
+    </div>
+
+    <div class="controls-info">
+      <p>Desktop: Arrow Keys/A/D • Mobile: Tap to steer • ESC to pause</p>
+    </div>
+
+    <footer class="game-footer">
+      <p>built by <a href="https://vivekn.dev">viveknathani</a> and AI • <a href="../">homepage</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
