@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Don't Touch the Center - A gravity-based survival game">
+  <title>Don't Touch the Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <h1 class="game-title">Don't Touch the Center</h1>
+      <div class="game-stats">
+        <div class="timer">Time: <span id="timer">0.0s</span></div>
+        <div class="best-time">Best: <span id="best-time">0.0s</span></div>
+      </div>
+    </header>
+
+    <div class="game-area">
+      <canvas id="game-canvas"></canvas>
+      
+      <div id="game-over" class="game-over hidden">
+        <h2>Game Over</h2>
+        <p>You survived <span id="final-time">0.0</span> seconds</p>
+        <button id="restart-btn" class="restart-btn">Try Again</button>
+      </div>
+
+      <div id="instructions" class="instructions">
+        <p><strong>Desktop:</strong> WASD or Arrow Keys</p>
+        <p><strong>Mobile:</strong> Tap and drag to move</p>
+        <p>Avoid the center! Gravity pulls you in...</p>
+        <button id="start-btn" class="start-btn">Start Game</button>
+      </div>
+    </div>
+
+    <div class="controls-info">
+      <p>Desktop: WASD/Arrows • Mobile: Touch to move • ESC to pause</p>
+    </div>
+
+    <footer class="game-footer">
+      <p>built by <a href="https://vivekn.dev">viveknathani</a> and AI • <a href="../">homepage</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

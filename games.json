@@ -1,0 +1,12 @@
+{
+  "games": [
+    {
+      "id": "dont-touch-the-center",
+      "title": "Don't Touch the Center",
+      "description": "Survive the gravitational pull!",
+      "icon": "🎯",
+      "created": "2026-01-03T00:00:00.000Z"
+    }
+  ],
+  "lastUpdated": "2026-01-03T00:00:00.000Z"
+}
