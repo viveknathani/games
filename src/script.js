@@ -73,7 +73,7 @@ class GameManager {
   openGame(gameId) {
     const game = this.games.find(g => g.id === gameId);
     if (game) {
-      window.open(`./${gameId}/`, '_blank');
+      window.location.href = `./${gameId}/`;
     }
   }
 

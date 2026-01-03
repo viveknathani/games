@@ -34,6 +34,7 @@ game-name/
 
 ### Game Files
 - **Main game**: Fully functional standalone game
+- **Favicon**: Game-specific emoji using SVG data URI format
 - **Footer**: "built by [viveknathani](https://vivekn.dev) and AI • [homepage](../)"
 - **Instructions**: Clear controls/objective within the game UI
 - **Responsive design**: Works on desktop and mobile
