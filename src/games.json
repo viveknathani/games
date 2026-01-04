@@ -20,7 +20,14 @@
       "description": "Navigate a winding track with limited visibility!",
       "icon": "🏎️",
       "created": "2026-01-03T00:00:00.000Z"
+    },
+    {
+      "id": "maze-runner",
+      "title": "Maze Runner",
+      "description": "Navigate through increasingly complex mazes!",
+      "icon": "🏃",
+      "created": "2026-01-04T00:00:00.000Z"
     }
   ],
-  "lastUpdated": "2026-01-03T00:00:00.000Z"
+  "lastUpdated": "2026-01-04T00:00:00.000Z"
 }
