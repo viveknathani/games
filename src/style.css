@@ -59,9 +59,10 @@ body {
 
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 240px);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .game-card {
@@ -72,12 +73,11 @@ body {
   text-align: center;
   transition: all 0.2s ease;
   cursor: pointer;
-  width: 240px;
-  height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  aspect-ratio: 1;
 }
 
 .game-card:hover {
@@ -150,29 +150,35 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
   body {
     padding: 1rem;
   }
-  
+
   .site-title {
     font-size: 1.6rem;
   }
-  
+
   .site-header {
     margin-bottom: 2rem;
   }
-  
+
   .games-grid {
     grid-template-columns: 1fr;
-    gap: 0.8rem;
+    gap: 1rem;
   }
-  
+
   .game-card {
     padding: 1.5rem;
     min-height: 100px;
   }
-  
+
   .site-footer {
     margin-top: 2rem;
   }
