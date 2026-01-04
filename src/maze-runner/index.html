@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Navigate through increasingly complex mazes in this minimalist puzzle game">
+  <title>Maze Runner</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏃</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Maze Runner</h1>
+      <div class="level-info">Level <span id="level-number">1</span></div>
+    </div>
+
+    <div class="instructions" id="instructions">
+      <p><strong>Desktop:</strong> Arrow keys or WASD to move</p>
+      <p><strong>Mobile:</strong> Swipe to move</p>
+      <p>Reach the green exit to advance!</p>
+      <button id="start-btn">Start Game</button>
+    </div>
+
+    <div class="game-wrapper" id="game-wrapper" style="display: none;">
+      <canvas id="game-canvas"></canvas>
+
+      <div class="controls">
+        <button id="restart-level-btn" class="control-btn">Restart Level</button>
+        <button id="restart-game-btn" class="control-btn">Restart Game</button>
+      </div>
+    </div>
+
+    <div class="transition-screen" id="transition-screen">
+      <div class="transition-text"></div>
+    </div>
+
+    <div class="completion-screen" id="completion-screen">
+      <h2>🎉 Congratulations!</h2>
+      <p>You've completed all levels!</p>
+      <button id="play-again-btn" class="control-btn">Play Again</button>
+    </div>
+
+    <footer>
+      built by <a href="https://vivekn.dev" target="_blank" rel="noopener">viveknathani</a> and AI • <a href="../">homepage</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze Runner Preview</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 240px;
+      height: 240px;
+      background: #0a0e27;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .maze-container {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      gap: 0;
+    }
+
+    .cell {
+      width: 100%;
+      height: 100%;
+      border: 0.5px solid #1a1f3a;
+    }
+
+    .wall {
+      background: #2d3748;
+    }
+
+    .path {
+      background: #f0f0f0;
+    }
+
+    .exit {
+      background: #00ff88;
+      position: relative;
+    }
+
+    .player {
+      width: 20px;
+      height: 20px;
+      background: #00d4ff;
+      border-radius: 50%;
+      position: absolute;
+      top: 27.5px;
+      left: 27.5px;
+      will-change: transform;
+      animation: movePlayer 6s infinite ease-in-out;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+    }
+
+    @keyframes movePlayer {
+      0% {
+        transform: translate(0, 0);
+      }
+      8% {
+        transform: translate(75px, 0);
+      }
+      16% {
+        transform: translate(75px, 0);
+      }
+      24% {
+        transform: translate(75px, 75px);
+      }
+      32% {
+        transform: translate(0, 75px);
+      }
+      40% {
+        transform: translate(0, 150px);
+      }
+      48% {
+        transform: translate(75px, 150px);
+      }
+      56% {
+        transform: translate(150px, 150px);
+      }
+      64% {
+        transform: translate(150px, 75px);
+      }
+      72% {
+        transform: translate(150px, 0);
+      }
+      80% {
+        transform: translate(150px, 0);
+      }
+      88% {
+        transform: translate(150px, 150px);
+      }
+      100% {
+        transform: translate(150px, 150px);
+      }
+    }
+
+    .exit::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #00ff88;
+      animation: exitPulse 2s infinite ease-in-out;
+      opacity: 0.3;
+    }
+
+    @keyframes exitPulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="maze-container">
+    <!-- Row 1 -->
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+
+    <!-- Row 2 -->
+    <div class="cell wall"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell wall"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell wall"></div>
+
+    <!-- Row 3 -->
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell path"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell path"></div>
+    <div class="cell wall"></div>
+
+    <!-- Row 4 -->
+    <div class="cell wall"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell wall"></div>
+
+    <!-- Row 5 -->
+    <div class="cell wall"></div>
+    <div class="cell path"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+
+    <!-- Row 6 -->
+    <div class="cell wall"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell path"></div>
+    <div class="cell wall"></div>
+
+    <!-- Row 7 -->
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell path"></div>
+    <div class="cell wall"></div>
+
+    <!-- Row 8 -->
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell wall"></div>
+    <div class="cell exit"></div>
+    <div class="cell wall"></div>
+
+    <!-- Animated player -->
+    <div class="player"></div>
+  </div>
+</body>
+</html>
