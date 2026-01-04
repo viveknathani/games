@@ -71,7 +71,7 @@ function generateTrackSegments() {
 
 // Get track segment at a given y position
 function getTrackSegment(y) {
-  const index = Math.floor((y + trackOffset) / 2);
+  const index = Math.floor((y - trackOffset) / 2);
   if (index < 0 || index >= trackSegments.length) {
     return null;
   }
@@ -99,7 +99,7 @@ function drawTrack() {
   // Draw track segments
   for (let i = 0; i < trackSegments.length; i++) {
     const segment = trackSegments[i];
-    const y = segment.y - trackOffset;
+    const y = segment.y + trackOffset;
 
     if (y < -10 || y > canvas.height + 10) continue;
 
